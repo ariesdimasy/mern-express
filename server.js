@@ -31,6 +31,6 @@ app.post("/contact", function (req, res) {
   });
 });
 
-app.listen(port || process.env.PORT, function () {
-  console.log("port listen in " + port);
+app.listen(process.env.PORT ? process.env.PORT : port, function () {
+  console.log("port listen in " + process.env.PORT ? process.env.PORT : port);
 });
